@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<script src="cordova.js"></script>
+	<link rel="stylesheet" href="themes/madhuban.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.mobile-1.4.3.min.js"></script>
+	<script type="text/javascript" src="lib/fastclick.js"></script>
+	<script type="text/javascript" src="lib/handlebars.js"></script>	
+	<script type="text/javascript" src="lib/swipe.js"></script>	
+	<script src="lib/imageflip.mini.js"></script>
+</head>
+<body>
+	<script id="header_tpl" type="text/x-handlebars-template">
+		<div data-role="panel" class="nav-panel" data-display="push">
+			<div class="img_responsive">
+				<img border="0" src="assets/vrindavan_logo.JPG" alt="Logo">
+			</div>
+			<div>
+				<ul data-role="listview">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About us</a></li>
+					<li><a href="#projects">Our Projects</a></li>
+					<li><a href="#galleria">Galleria</a></li>
+					<li><a href="#contact">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="header" data-position="inline" id="header" class="center-align">
+			<!--<a href="javascript:(function(){$('.nav-panel:visible').panel('open');}());" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars" data-icon="bars" data-iconpos="notext">Menu</a>-->
+			<a href="javascript:(function(){$('.nav-panel:visible').panel('open');}());" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Menu</a>
+			<span class="font-lobster">Madhuban</span>
+		</div>
+	</script>
+	<script id="project_tpl" type="text/x-handlebars-template">
+		<ul class="projects">
+		{{#each projects}}
+			<li>
+				<a style="background-image:url('{{srcImage}}');background-size:cover;" class="img_responsive" href="{{url}}">
+					<span>{{projectName}}</span>
+				</a>
+			</li>
+		{{/each}}
+		</ul>
+	</script>
+	<div id="home" data-role="page" data-theme="a">	
+		<div role="main" class="ui-content no-pad" data-theme="a">
+			<div id="slider" class="swipe">
+				<div class='swipe-wrap'>
+					<div class="img_responsive">
+						<img src="assets/banner1.jpg" width="600" height="300" alt="Make Image responsive" />
+					</div>
+					<div class="img_responsive">
+						<img src="assets/banner2.jpg" width="600" height="300" alt="Make Image responsive" />
+					</div>
+					<div class="img_responsive">
+						<img src="assets/banner3.jpg" width="600" height="300" alt="Make Image responsive" />
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="ui-grid-a">
+					<div class="ui-block-a pagina">
+						<div class="tile ico-website"></div>
+						<div><span class="font-lobster" style="font-size:1.2em;">Visit our website</span></div>
+					</div>
+					<div class="ui-block-b pagina">
+						<div class="tile ico-meeting"></div>
+						<div><span class="font-lobster" style="font-size:1.2em;">Schedule a meeting</span></div>
+					</div>
+				</div>
+				<div class="ui-grid-a">
+					<div class="ui-block-a pagina">
+						<div class="tile ico-contact"></div>
+						<div><span class="font-lobster" style="font-size:1.2em;">Contact us..</span></div>
+					</div>
+					<div class="ui-block-b pagina">
+						<div class="tile ico-project"></div>
+						<div><span class="font-lobster" style="font-size:1.2em;">Our projects</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="about" data-role="page" data-theme="a">	
+		<div role="main" class="ui-content" data-theme="a">
+			<div>
+				<img src="assets/about1.jpg" class="img_responsive"/>
+			</div>
+			<p class="typography">
+				Vrindavan Land Developers have been in the Mumbai Real Estate Area since the last two decades with total of more than 3 Million Sq.ft. of land under development in residential and commercial projects in Mumbai and Thane. The main founding stones of the groups philosophy come from principles of equality and transparent delivery. Since the beginning, we have believed in delivering true value to our customers and earn their trust and love, which is testified through these years.
+			</p>
+			<div>
+				<img src="assets/about2.jpg" class="img_responsive"/>
+			</div>
+			<p class="typography">
+				Madhuban is the definition of modern lifestyles coming to Karjat. An ambitious project packed with all the modern facilities creates a new statement of refined living. A complex pristine environment and efficient planning, the project adds to comfort and convinience of every day life.
+			</p>
+		</div>
+	</div>
+	<div id="projects" data-role="page" data-theme="a">	
+		<div role="main" class="ui-content no-pad" data-theme="a">
+			<div id="prjList">
+			</div>
+		</div>
+	</div>
+	<div id="galleria" data-role="page" data-theme="a">	
+		<div role="main" class="ui-content" data-theme="a">
+			<div class="content-primary">
+				<ul id="gallery">
+					<li><a href="images/4f7d341e82ba1.jpg"><img src="images/4f7d341e82ba1.jpg" width="100px" height="100px" /></a></li>
+					<li><a title="Add Image discription to Title Attribe of A tag to display in here" href="images/4f7d363cb2236.jpg" ><img src="images/4f7d363cb2236.jpg" width="100px" height="100px" /></a></li>
+					<li><a href="images/4f7d386046e12.jpg"><img src="images/4f7d386046e12.jpg" width="100px" height="100px" /></a></li>
+					<li><a href="images/4f506f7a8ef30.jpg"><img src="images/4f506f7a8ef30.jpg" width="100px" height="100px" /></a></li>
+					<li><a href="images/4f975e2862141.jpg"><img src="images/4f975e2862141.jpg" width="100px" height="100px" /></a></li>
+					<li><a href="images/4f85120f97815.jpg"><img src="images/4f85120f97815.jpg" width="100px" height="100px" /></a></li>
+					<li><a href="images/4f85134ae2c05.jpg"><img src="images/4f85134ae2c05.jpg" width="100px" height="100px"/></a></li>
+					<li><a href="images/4f828774366b1.jpg"><img src="images/4f828774366b1.jpg" width="100px" height="100px" /></a></li>
+					<li><a href="images/4fce4e99213b5.jpg"><img src="images/4fce4e99213b5.jpg" width="100px" height="100px" /></a></li>
+				</ul>
+				</div>
+		</div>
+	</div>
+	<div id="contact" data-role="page" data-theme="a">	
+		<div role="main" role="main" class="ui-content blur-background no-pad" data-theme="a">
+			<div id="map">
+				<img src="assets/madhuban_map.jpg" />
+			</div>
+			<div class="center-align">
+				<a id="btn" class="ui-btn ui-btn-inline ui-btn-a ui-btn-icon-left ui-icon-navigation ui-btn-size">NAVIGATE TO US</a><br/>
+				<a id="btn1" href="tel:30883088" class="ui-btn ui-btn-inline ui-btn-a ui-btn-icon-left ui-icon-phone ui-btn-size">GET IN TOUCH</a>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.js"></script>
+	<!--<script src="js/comp.js"></script>-->
+</body>
+</html>

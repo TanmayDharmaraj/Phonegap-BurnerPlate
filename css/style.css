@@ -1,0 +1,334 @@
+@media only screen and (max-width:320px){
+	@font-face {
+	  font-family: 'Lobster';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Lobster'), url(../fonts/Lobster.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Cabin';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Cabin Regular'), local('Cabin-Regular'), url(../fonts/Cabin.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Cabin500';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: local('Cabin Medium'), local('Cabin-Medium'), url(../fonts/Cabin500.ttf) format('truetype');
+	}
+}
+@media only screen and (max-device-width:720px) and (orientation:portrait){
+	@font-face {
+	  font-family: 'Lobster';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Lobster'), url(../fonts/Lobster.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Cabin';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Cabin Regular'), local('Cabin-Regular'), url(../fonts/Cabin.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Cabin500';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: local('Cabin Medium'), local('Cabin-Medium'), url(../fonts/Cabin500.ttf) format('truetype');
+	}
+}
+@media only screen and (max-device-width:1280px) and (orientation:landscape){
+	@font-face {
+	  font-family: 'Lobster';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Lobster'), url(../fonts/Lobster.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Cabin';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Cabin Regular'), local('Cabin-Regular'), url(../fonts/Cabin.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Cabin500';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: local('Cabin Medium'), local('Cabin-Medium'), url(../fonts/Cabin500.ttf) format('truetype');
+	}
+}
+@media only screen{
+	@font-face {
+	  font-family: 'Lobster';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Lobster'), url(../fonts/Lobster.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Cabin';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Cabin Regular'), local('Cabin-Regular'), url(../fonts/Cabin.ttf) format('truetype');
+	}
+	@font-face {
+	  font-family: 'Cabin500';
+	  font-style: normal;
+	  font-weight: 500;
+	  src: local('Cabin Medium'), local('Cabin-Medium'), url(../fonts/Cabin500.ttf) format('truetype');
+	}
+}
+
+
+.font-lobster{
+	font-family: Lobster, cursive !important;
+	font-size: 2em;
+}
+.font-cabin{
+	font-family: 'Cabin', sans-serif;
+	font-size: 2em;
+}
+.font-cabin500{
+	font-family: 'Cabin500', sans-serif;
+	font-size: 2em;
+}
+[role="main"]{
+font-family:'Cabin',sans-serif;
+background-color:#f5f3ee;
+background-size:cover;
+}
+.center-align{
+text-align:center;
+}
+/*CSS for Project list view*/
+.projects { 
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.projects > li {
+  border-bottom: 2px #dd4977 solid;
+  height: 136px;
+  width: 100%;
+  position: relative;
+  overflow:hidden;
+}
+.projects li a {
+  background-color: #777;
+  display: block;
+  height: 100%;
+  postion: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.projects > li > img {
+  
+  width: 100%;
+  height: 135px;
+  position: absolute; top:0; left: 0; right: 0;
+  z-index: 10;
+}
+
+.projects > li > a > span {
+  background-color: #dd4977;
+  color: #fff;
+  font-size: 21px;
+  letter-spacing: 1px;
+  padding: 3px 5px 0 5px;
+  position: absolute; bottom: 0; left: 6px;
+  z-index: 20;
+}
+/*CSS for Project list view, End*/
+
+/*CSS for contact us*/
+.blur-background{
+	background-image:url('../assets/blurred_villa.jpg');
+	background-size:cover;
+	height:500px;
+}
+.ui-btn-size {
+    width: 200px !important;
+	box-shadow: 5px 5px 5px #000;
+	background-color:black !important;
+	color:white !important;
+	letter-spacing:2px !important;
+}
+#map>img{
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	display: block;
+	box-shadow: 5px 5px 5px #000;
+}
+.typography{
+	margin-top: .5em; color: #666;
+	text-align:justify;
+}
+/*CSS for contact us, End*/
+/*CSS Gallery*/
+#gallery {
+list-style: none;
+padding: 0px;
+margin: 0px;
+display:block;
+}
+#gallery li {
+list-style: none;
+padding: 0px;
+margin: 0px;
+border: 0px solid #999;
+float: left
+}
+#imageflippage {
+background-color: #000;
+margin: 0px;
+padding: 0px;
+border: none;
+height: 100%;
+width: 100%
+}
+#tadcontent {
+padding: 0px;
+margin: 0px;
+position: relative;
+background: #000;
+height: 100%;
+width: 100%;
+}
+#imageflipimg {
+vertical-align: middle;
+height: 100%;
+width: 100%;
+z-index: 98;
+background-position: center;
+background-size: contain;
+text-align: center;
+background-repeat: no-repeat
+}
+#imagefliper {
+width: 100%;
+top: 45px;
+bottom: 0px;
+position: absolute;
+z-index: 99
+}
+#tadnavi {
+position: fixed;
+top: 0px;
+z-index: 100;
+width: 100%;
+opacity: 0.7;
+display: none
+}
+#tadinfo {
+position: fixed;
+display: none;
+bottom: 0px;
+width: 100%;
+padding: 5px;
+background-color: #333333;
+opacity: 0.7;
+color: #FFFFFF;
+text-align: center;
+font-size: small;
+font-family: Verdana, Geneva, sans-serif
+}
+#tadclose, #tadbk, #tadnxt{
+	width:100% !important;
+	height:100% !important;
+	border-radius:0px !important;
+	text-align:center !important;
+	
+}
+.ui-btn-icon-top:after{
+top:1em !important;
+}
+/*CSS Gallery, End*/
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+  margin-bottom:0.5em;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+/*Banner Image Responsive*/
+.img_responsive>img {
+	width: 100%;
+	height:auto;
+}
+.img_responsive {
+	width: 100%;
+	height:auto;
+}
+/*Tiles*/ 
+.pagina{
+    /*width:100%;
+    height:auto;*/     
+	text-align:center;
+	margin-bottom:0.5em;
+}
+ 
+.linha{
+    width:auto;
+    padding:5px;
+    height:auto;
+    display:table;      
+}
+.tile{
+    height:100px;   
+    width:100px;  
+    margin:0 5px 0 0;
+    padding:2px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.amarelo{
+    background:#DAA520;
+}
+ 
+.vermelho{
+    background:#CD0000;  
+}
+ 
+.azul{
+    background:#4682B4;
+}
+ 
+.verde{
+    background-color: #2E8B57;
+}
+.ico-website{
+	background-image:url('../assets/ico/website.png');
+	background-size:cover;
+}
+.ico-contact{
+	background-image:url('../assets/ico/contact_us.png');
+	background-size:cover;
+}
+.ico-project{
+	background-image:url('../assets/ico/projects.png');
+	background-size:cover;
+}
+.ico-meeting{
+	background-image:url('../assets/ico/schedule_meeting.png');
+	background-size:cover;
+}
+.ico-btn-contact{
+	background-image:url('../assets/ico/contact_us.png');
+	width:24px;
+	height:auto;
+}
+.no-pad{
+padding:0 !important;
+}
